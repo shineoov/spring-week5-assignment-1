@@ -49,7 +49,7 @@ class UserServiceTest {
     class Describe_saveUser {
 
         @Nested
-        @DisplayName("주어진 저장 요청대로")
+        @DisplayName("저장 요청이 주어지면")
         class Context_givenSaveRequest {
 
             UserSaveRequest saveRequest = new UserSaveRequest() {

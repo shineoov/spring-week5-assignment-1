@@ -31,7 +31,7 @@ public class UserController {
     }
 
     /**
-     * 회원을 등록하고 등록된 회원 데이터를 리턴합니다.
+     * 회원을 등록하고 전송에 필요한 회원 데이터를 리턴합니다.
      *
      * @param saveSource 등록할 회원 데이터
      * @return 등록된 회원 데이터
@@ -54,7 +54,8 @@ public class UserController {
      */
     @ResponseStatus(HttpStatus.OK)
     @PatchMapping("/{userId}")
-    public UserResponseData patch(@PathVariable Long userId, @RequestBody @Valid UserUpdateRequestData updateSource) {
+    public UserResponseData patch(@PathVariable Long userId,
+                                  @RequestBody @Valid UserUpdateRequestData updateSource) {
 
         final User foundUser = userService.getUser(userId);
 
